@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        hiiiss {process.env.REACT_APP_NAME}
+        hiiiss hello {process.env.REACT_APP_NAME}
       </header>
     </div>
   );

@@ -1,0 +1,17 @@
+version: '3'
+services:
+  react-app:
+    # stdin_open: true  for i
+    # tty: true         for t  = -it in this cmd sudo docker run -it --env-file ./.env -v $(pwd)/src:/app/src:ro -d -p 3000:3000 --name react-app react-image
+    
+    # build: sudo docker build .
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src:/app/src
+    environment:
+      # - name=value
+      - REACT_APP_NAME=cv
+    # env_file:
+    #   - ./.env_file

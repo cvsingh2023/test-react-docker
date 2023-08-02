@@ -3,9 +3,11 @@ services:
   react-app:
     # stdin_open: true  for i
     # tty: true         for t  = -it in this cmd sudo docker run -it --env-file ./.env -v $(pwd)/src:/app/src:ro -d -p 3000:3000 --name react-app react-image
-    
+
     # build: sudo docker build .
-    build: .
+    build: 
+      content: .
+      context: Dockerfile.dev
     ports:
       - "3000:3000"
     volumes:
